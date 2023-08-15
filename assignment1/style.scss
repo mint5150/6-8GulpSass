@@ -1,0 +1,17 @@
+$width: 100px;
+
+@mixin boxContent($width) {
+
+  @if $width >= 100px {
+    height: 100px;
+    width: $width;
+  } @else {
+    height: 500px;
+    width: $width;
+  }
+}
+
+.container {
+  @include boxContent($width);
+  background: pink;
+}
